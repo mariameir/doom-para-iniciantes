@@ -21,3 +21,21 @@ titulo.offsetHeight; // retorna a altura do elemento;
 
 titulo.addEventListener('click', callback);
 // ativa a função callback ao click no titulo
+
+
+
+const href = window.location.href;
+
+console.log(href);
+if (href === 'sdasdadas'){
+  console.log('é igual')
+}
+
+const h1Selecionado = document.querySelector('h1');
+const h1classes = h1Selecionado.classList;
+
+function teste(){
+  console.log('Clicou em ', h1Selecionado.innerText);
+}
+
+h1Selecionado.addEventListener('click', teste)
