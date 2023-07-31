@@ -4,8 +4,8 @@ console.log(href);
 
 // Seleciona o primeiro elemento da página que
 // possua a classe ativo
-const titulo = document.querySelector('h1');
-console.log(titulo.classList);
+const titulo = document.querySelector('.ativo');
+console.log(titulo);
 
 // Retorne a linguagem do navegador
 const lingua = window.navigator.language;
