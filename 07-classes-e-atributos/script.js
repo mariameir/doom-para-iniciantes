@@ -41,4 +41,4 @@ animais1.className = 'azul'; // substitui completamente a string
 animais1.className += ' vermelho'; // adiciona vermelho à string
 
 animais1.attributes = 'class="ativo"'; // não funciona, read-only
-//Lembre-se que podemos modificar o valor de uma propriedade objeto.propriedade = ''
+//Lembre-se que podemos modificar o valor de uma propriedade objeto.propriedade = '' 
