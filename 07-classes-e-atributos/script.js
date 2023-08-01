@@ -10,6 +10,17 @@ menu.classList.toggle('ativo'); // adiciona/remove a classe
 menu.classList.contains('ativo'); // true ou false
 menu.classList.replace('ativo', 'inativo');
 
+ //praticando
+const menu1 = document.querySelector('.menu');
+menu.classList.add('ativo', 'teste');
+menu.classList.remove('azul');
+if(menu.classList.contains('azul')){
+  menu.classList.add('contem-azul');
+}else{
+  menu.classList.add('nao-contem-azul');
+}
+
+
 
 
 //ATTRIBUTES - Retorna uma array-like com os atributos do elemento.
@@ -23,6 +34,7 @@ animais.attributes[0]; // retorna o primeiro atributo
 //GETATTRIBUTE E SETATTRIBUTE - Métodos que retornam ou definem de acordo com o atributo selecionado.
 const img = document.querySelector('img');
 
+console.log(img.getAttribute('alt'))
 img.getAttribute('src'); // valor do src
 img.setAttribute('alt', 'Texto Alternativo'); // muda o alt
 img.hasAttribute('id'); // true / false
