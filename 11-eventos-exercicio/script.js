@@ -2,26 +2,21 @@
 // adicione a classe ativo ao item clicado e remova dos
 // demais itens caso eles possuam a mesma. Previna
 
-// Seleciona todos os links internos do documento cujo atributo href começa com "#"
+
 const linksInternos = document.querySelectorAll('a[href^="#"]');
 
-// Função que será executada quando ocorrer um clique em um dos links internos
-function handleLink(event) {
-  event.preventDefault(); // Previne o comportamento padrão do link (navegação)
-
-  // Percorre todos os links internos e remove a classe "ativo" deles
-  linksInternos.forEach((link) => {
+function handleLink(evento){
+  evento.preventDefault();
+  linksInternos.forEach((link)=>{
     link.classList.remove("ativo");
   });
-
-  this.classList.add("ativo"); // Adiciona a classe "ativo" ao link que foi clicado
+  this.classList.add("ativo")
 }
 
-// Adiciona um evento de clique a cada link interno, chamando a função handleLink quando ocorrer o clique
-linksInternos.forEach((link) => {
-  link.addEventListener('click', handleLink);
-});
-
+linksInternos.forEach((link)=>{
+  link.addEventListener('click', handleLink)
+}
+)
 
 
 
@@ -34,12 +29,15 @@ function handleElemento(event){
   event.currentTarget.remove();
 };
 
-todosElementos.forEach((elementos)=>{
-  elementos.addEventListener('click', handleElemento);
-})
+// todosElementos.forEach((elementos)=>{
+//   elementos.addEventListener('click', handleElemento);
+// })
 
 // Utilizando o código anterior, ao invés de mostrar no console,
 // remova o elemento que está sendo clicado, o método remove() remove um elemento
+
+
+
 
 
 
@@ -50,7 +48,5 @@ function handleKeyboard(event) {
   if(event.key === 't'){
     document.body.style.fontSize='larger';
   }
-  
 }
-
 window.addEventListener('keydown', handleKeyboard);
