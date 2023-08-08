@@ -27,8 +27,30 @@ linksInternos.forEach((link) => {
 
 // Selecione todos os elementos do site começando a partir do body,
 // ao clique mostre exatamente quais elementos estão sendo clicados
+const todosElementos = document.querySelectorAll('body *');
+
+function handleElemento(event){
+  // console.log(event.currentTarget);
+  event.currentTarget.remove();
+};
+
+todosElementos.forEach((elementos)=>{
+  elementos.addEventListener('click', handleElemento);
+})
 
 // Utilizando o código anterior, ao invés de mostrar no console,
 // remova o elemento que está sendo clicado, o método remove() remove um elemento
 
+
+
+
+
 // Se o usuário clicar na tecla (t), aumente todo o texto do site.
+function handleKeyboard(event) {
+  if(event.key === 't'){
+    document.body.style.fontSize='larger';
+  }
+  
+}
+
+window.addEventListener('keydown', handleKeyboard);
